@@ -1,0 +1,1066 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tuyển sinh VHU - Tương lai không chờ đợi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#005aa4", "primary-dark": "#003D73", secondary: "#476083", heading: "#0F172A", "body-text": "#555555", surface: "#f9f9ff", "on-surface": "#181c21", "outline-variant": "#c1c7d4", "scholarship-bg": "rgba(244, 180, 0, 0.05)", "light-blue-tint": "#F0F7FF", "on-background": "#181c21", "surface-container-highest": "#e0e2ea", "secondary-container": "#bcd6ff", "on-tertiary-container": "#fff6f3", "on-error-container": "#93000a", "on-secondary-fixed": "#001c3a", "surface-bright": "#f9f9ff", "on-tertiary-fixed": "#321300", "inverse-primary": "#a4c8ff", "surface-container": "#eceef6", "inverse-on-surface": "#eff0f9", "surface-container-low": "#f1f3fb", "secondary-fixed": "#d4e3ff", "primary-container": "#0b73cd", "primary-fixed": "#d4e3ff", "on-tertiary-fixed-variant": "#743500", "on-primary": "#ffffff", "surface-tint": "#005fad", "surface-dim": "#d8dae2", "primary-fixed-dim": "#a4c8ff", "on-primary-container": "#f7f8ff", "tertiary-fixed-dim": "#ffb689", "secondary-fixed-dim": "#afc8f1", "on-primary-fixed": "#001c3a", "on-surface-variant": "#414752", error: "#ba1a1a", "on-primary-fixed-variant": "#004784", outline: "#717783", "on-secondary": "#ffffff", "surface-variant": "#e0e2ea", "tertiary-container": "#b65700", "inverse-surface": "#2d3037", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#2e486a", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container-high": "#e6e8f0", tertiary: "#904400", "tertiary-fixed": "#ffdbc8", background: "#f9f9ff", "on-secondary-container": "#445d80", "on-tertiary": "#ffffff"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {gutter: "24px", "container-max": "1280px", "section-gap": "120px", "margin-mobile": "20px", "margin-desktop": "80px", "stack-lg": "40px"}, fontFamily: {headline: ["Montserrat"], body: ["Montserrat"], display: ["Montserrat"], label: ["Montserrat"]}, fontSize: {}}}};</script>
+<style>
+        :root {
+            --vhu-blue: #0068d9;
+            --vhu-blue-dark: #003f91;
+            --vhu-cyan: #00b7ff;
+            --vhu-orange: #ff8500;
+            --vhu-ink: #10213c;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #555555;
+            background: #f8fbff;
+            line-height: 1.65;
+        }
+        h1, h2, h3, h4, .font-headline {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--vhu-ink);
+        }
+        section {
+            position: relative;
+        }
+        .max-w-container-max {
+            width: 100%;
+            max-width: none !important;
+            padding-left: clamp(18px, 4vw, 72px) !important;
+            padding-right: clamp(18px, 4vw, 72px) !important;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .vhu-shadow {
+            box-shadow: 0 16px 45px -25px rgba(0, 62, 145, 0.32);
+        }
+        .vhu-shadow-hover:hover {
+            box-shadow: 0 24px 55px -25px rgba(0, 62, 145, 0.42);
+            transform: translateY(-6px);
+        }
+        .hero-light-gradient {
+            background: linear-gradient(135deg, #F9F9FF 0%, #E8F1F9 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #ff9c20 0%, #ff7600 100%);
+            color: white;
+            border: 0 !important;
+            border-radius: 14px !important;
+            box-shadow: 0 12px 28px -12px rgba(255, 118, 0, 0.8);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.05);
+            box-shadow: 0 17px 34px -12px rgba(255, 118, 0, 0.9);
+        }
+        .site-header {
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid rgba(0, 104, 217, 0.1);
+            box-shadow: 0 12px 40px -30px rgba(0, 63, 145, 0.75);
+        }
+        .site-header::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+            height: 3px;
+            background: linear-gradient(90deg, var(--vhu-blue-dark), var(--vhu-cyan), var(--vhu-orange));
+        }
+        .desktop-nav a {
+            position: relative;
+            border: 0;
+            padding: 10px 0;
+        }
+        .desktop-nav a::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: 2px;
+            height: 2px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--vhu-blue), var(--vhu-cyan));
+            transition: left 0.25s ease, right 0.25s ease;
+        }
+        .desktop-nav a:hover::after,
+        .desktop-nav a:first-child::after {
+            left: 0;
+            right: 0;
+        }
+        .mobile-menu-button {
+            display: none;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0, 104, 217, 0.16);
+            border-radius: 12px;
+            background: #f4f9ff;
+            color: var(--vhu-blue-dark);
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+        .mobile-menu-button:hover {
+            background: var(--vhu-blue);
+            color: #fff;
+        }
+        .mobile-menu {
+            display: none;
+        }
+        .hero-banner {
+            padding: 83px 0 0;
+            overflow: hidden;
+            background: #0573e5;
+        }
+        .hero-banner::before,
+        .hero-banner::after {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border: 1px solid rgba(0, 104, 217, 0.12);
+            border-radius: 50%;
+        }
+        .hero-banner::before {
+            left: -130px;
+            top: 130px;
+        }
+        .hero-banner::after {
+            right: -120px;
+            bottom: -130px;
+        }
+        .hero-frame {
+            position: relative;
+            width: 100%;
+            max-width: none;
+            margin: 0;
+            aspect-ratio: 1000 / 563;
+            overflow: hidden;
+            border: 0;
+            border-radius: 0;
+            background: #0877e8;
+            box-shadow: none;
+            isolation: isolate;
+        }
+        .hero-frame img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        .hero-action {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 22px;
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            border-radius: 999px;
+            background: rgba(0, 39, 107, 0.78);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            box-shadow: 0 14px 30px rgba(0, 24, 79, 0.28);
+            backdrop-filter: blur(12px);
+            transform: translateX(-50%);
+            transition: transform 0.25s ease, background 0.25s ease;
+        }
+        .hero-action:hover {
+            background: var(--vhu-orange);
+            transform: translateX(-50%) translateY(-3px);
+        }
+        .hero-action .material-symbols-outlined {
+            font-size: 20px;
+        }
+        section[id] {
+            scroll-margin-top: 90px;
+        }
+        section.bg-white {
+            background: rgba(255, 255, 255, 0.96) !important;
+        }
+        section.bg-slate-50 {
+            background:
+                radial-gradient(circle at 12% 15%, rgba(0, 183, 255, 0.07), transparent 25%),
+                linear-gradient(180deg, #f7fbff 0%, #eef6ff 100%) !important;
+        }
+        section h2 {
+            letter-spacing: -0.035em;
+        }
+        section h2 + p {
+            color: #64748b;
+        }
+        #why-vhu > div,
+        #majors > div,
+        #scholarships > div,
+        #register > div,
+        footer > div {
+            width: 100%;
+            max-width: none !important;
+        }
+        #testimonial-slider .max-w-4xl {
+            width: min(100%, 1180px);
+            max-width: 1180px !important;
+        }
+        section:has(.faq-btn) .max-w-3xl {
+            width: min(100%, 1120px);
+            max-width: 1120px !important;
+        }
+        section:has(.faq-btn) .max-w-3xl,
+        section.bg-light-blue-tint .max-w-4xl {
+            padding-left: clamp(18px, 4vw, 72px) !important;
+            padding-right: clamp(18px, 4vw, 72px) !important;
+        }
+        section.bg-light-blue-tint .max-w-4xl {
+            width: min(100%, 1400px);
+            max-width: 1400px !important;
+        }
+        #why-vhu .grid > div,
+        #majors .grid > div,
+        #scholarships .grid > div,
+        #testimonial-slider > div > div > div {
+            border-color: rgba(0, 104, 217, 0.1) !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        #why-vhu .grid > div:hover,
+        #majors .grid > div:hover,
+        #scholarships .grid > div:hover {
+            border-color: rgba(0, 104, 217, 0.25) !important;
+            box-shadow: 0 24px 60px -32px rgba(0, 63, 145, 0.55);
+            transform: translateY(-7px);
+        }
+        #why-vhu .grid > div {
+            border-radius: 24px;
+            background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%);
+        }
+        #why-vhu .grid > div > div:first-child {
+            background: linear-gradient(145deg, #e8f5ff, #f5fbff);
+            box-shadow: inset 0 0 0 1px rgba(0, 104, 217, 0.08);
+        }
+        #majors .grid > div {
+            border: 1px solid rgba(0, 104, 217, 0.1);
+            border-radius: 24px;
+            box-shadow: 0 16px 45px -28px rgba(0, 63, 145, 0.45);
+        }
+        #majors .grid > div > div:first-child::after {
+            content: "";
+            position: absolute;
+            inset: auto 0 0;
+            height: 45%;
+            background: linear-gradient(transparent, rgba(0, 37, 94, 0.26));
+            pointer-events: none;
+        }
+        #scholarships .grid > div {
+            border-radius: 26px;
+            overflow: hidden;
+        }
+        #register .bg-white.p-10 {
+            border-radius: 28px;
+            border-color: rgba(0, 104, 217, 0.12);
+            box-shadow: 0 30px 75px -42px rgba(0, 63, 145, 0.65);
+        }
+        #register input,
+        #register select {
+            border: 1px solid #e3edf8 !important;
+            background: #f8fbff !important;
+            min-height: 56px;
+        }
+        #register input:focus,
+        #register select:focus {
+            border-color: var(--vhu-blue) !important;
+            background: #fff !important;
+            box-shadow: 0 0 0 4px rgba(0, 104, 217, 0.1) !important;
+        }
+        .faq-btn {
+            min-height: 76px;
+        }
+        .faq-btn:hover {
+            color: var(--vhu-blue);
+        }
+        footer {
+            background:
+                radial-gradient(circle at 10% 0%, rgba(0, 183, 255, 0.08), transparent 28%),
+                #fff !important;
+        }
+        @media (max-width: 767px) {
+            .site-header > div {
+                padding: 12px 16px;
+            }
+            .site-header img {
+                height: 36px;
+            }
+            .site-header > div > .btn-primary {
+                display: none;
+            }
+            .mobile-menu-button {
+                display: inline-flex;
+            }
+            .mobile-menu {
+                position: absolute;
+                top: calc(100% + 1px);
+                left: 12px;
+                right: 12px;
+                padding: 12px;
+                border: 1px solid rgba(0, 104, 217, 0.12);
+                border-radius: 0 0 20px 20px;
+                background: rgba(255, 255, 255, 0.98);
+                box-shadow: 0 24px 50px -28px rgba(0, 39, 107, 0.7);
+                backdrop-filter: blur(18px);
+            }
+            .mobile-menu.is-open {
+                display: block;
+                animation: mobileMenuIn 0.22s ease-out;
+            }
+            .mobile-menu a:not(.btn-primary) {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 13px 14px;
+                border-radius: 11px;
+                color: #334155;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+            }
+            .mobile-menu a:not(.btn-primary):hover {
+                background: #eef7ff;
+                color: var(--vhu-blue);
+            }
+            .mobile-menu .material-symbols-outlined {
+                color: var(--vhu-blue);
+                font-size: 21px;
+            }
+            .mobile-menu .btn-primary {
+                display: flex;
+                justify-content: center;
+                margin-top: 8px;
+                padding: 13px 16px;
+                font-size: 13px;
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+            .hero-banner {
+                padding: 67px 0 0;
+            }
+            .hero-frame {
+                width: 100%;
+                border-radius: 0;
+            }
+            .hero-action {
+                display: none;
+            }
+            section[class*="py-section-gap"] {
+                padding-top: 72px !important;
+                padding-bottom: 72px !important;
+            }
+            #why-vhu .grid > div {
+                padding: 28px;
+            }
+        }
+        @keyframes mobileMenuIn {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .max-w-container-max {
+                padding-left: 32px !important;
+                padding-right: 32px !important;
+            }
+            .desktop-nav {
+                gap: 18px;
+                font-size: 12px;
+            }
+            #majors .grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (min-width: 1600px) {
+            #why-vhu .grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            #majors .grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+            #why-vhu .grid,
+            #majors .grid,
+            #scholarships .grid {
+                gap: clamp(24px, 2vw, 40px);
+            }
+            #register > div {
+                grid-template-columns: minmax(0, 0.9fr) minmax(560px, 1.1fr);
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white overflow-x-hidden">
+<!-- Header Section -->
+<header class="site-header fixed top-0 w-full z-50 backdrop-blur-md">
+<div class="flex justify-between items-center px-6 lg:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center">
+<img alt="Van Hien University Logo" class="h-10 lg:h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMCBnrFrTX88ZzSSFtbY6vadLpoVparZswwzW-z5xRj2rf6VeINZsNx7BxpXCFuU0kZVqJjCOfvT7Jq74mXNersghCEabz5Z63t-LnMqt4CSpWSqzoCSkyWHMFCFLmxqyNUXod3Cs01vIM3Hv1Vx00DcsQUKUD3f5PZ9doc-sbF6aXR_195zTDzzXd1-ZbvXlXbKrSDl_83HzP4A18n5DLn7AdepAFM5u4X4e5KpadchNiKybORpxlwUqF4qnWonbuIJN7__Um70Lf">
+</div>
+<nav class="desktop-nav hidden md:flex items-center gap-8 font-semibold text-sm uppercase tracking-wide">
+<a class="text-primary border-b-2 border-primary pb-1" href="#">Trang chủ</a>
+<a class="text-slate-600 hover:text-primary transition-colors" href="#why-vhu">Vì sao chọn VHU</a>
+<a class="text-slate-600 hover:text-primary transition-colors" href="#majors">Ngành học</a>
+<a class="text-slate-600 hover:text-primary transition-colors" href="#scholarships">Học bổng</a>
+<a class="text-slate-600 hover:text-primary transition-colors" href="#register">Tư vấn</a>
+</nav>
+<a class="btn-primary px-6 py-2.5 rounded-lg font-bold text-sm uppercase tracking-wider shadow-md border-2 border-primary" href="#register">
+                Đăng ký ngay
+            </a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Mở menu điều hướng" class="mobile-menu-button" id="mobile-menu-button" type="button">
+<span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
+</button>
+</div>
+<nav aria-label="Điều hướng trên điện thoại" class="mobile-menu" id="mobile-menu">
+<a href="#"><span class="material-symbols-outlined">home</span>Trang chủ</a>
+<a href="#why-vhu"><span class="material-symbols-outlined">verified</span>Vì sao chọn VHU</a>
+<a href="#majors"><span class="material-symbols-outlined">school</span>Ngành học</a>
+<a href="#scholarships"><span class="material-symbols-outlined">workspace_premium</span>Học bổng</a>
+<a href="#register"><span class="material-symbols-outlined">support_agent</span>Tư vấn</a>
+<a class="btn-primary" href="https://tuyensinh.vhu.edu.vn/tuyen-sinh-dai-hoc-chinh-quy-2026">Đăng ký ngay</a>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="hero-banner" aria-label="Tuyển sinh Đại học Văn Hiến 2026">
+<div class="hero-frame">
+<img alt="Đại học Văn Hiến nhận hồ sơ xét học bạ từ ngày 16 tháng 5 năm 2026" src="assets/hero-xet-hoc-ba-2026.jpg">
+<a class="hero-action" href="https://tuyensinh.vhu.edu.vn/tuyen-sinh-dai-hoc-chinh-quy-2026">
+<span>Đăng ký xét tuyển ngay</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Why Choose VHU Section -->
+<section class="py-section-gap bg-white" id="why-vhu">
+<div class="max-w-container-max mx-auto px-6 lg:px-margin-desktop">
+<div class="text-center mb-20 reveal active">
+<span class="text-primary font-bold text-sm uppercase tracking-widest block mb-4">Giá trị cốt lõi</span>
+<h2 class="text-3xl lg:text-4xl font-bold mb-4">Vì sao nên chọn Văn Hiến?</h2>
+<div class="w-20 h-1.5 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="group p-10 rounded-2xl bg-white vhu-shadow border border-slate-100 transition-all hover:bg-blue-50/50 reveal active">
+<div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">menu_book</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Chương trình thực tiễn</h3>
+<p class="text-body-text leading-relaxed">Đào tạo theo chuẩn ứng dụng, giảm lý thuyết, tăng thực hành thực tế tại doanh nghiệp ngay từ năm nhất.</p>
+</div>
+<!-- Feature 2 -->
+<div class="group p-10 rounded-2xl bg-white vhu-shadow border border-slate-100 transition-all hover:bg-blue-50/50 reveal active" style="transition-delay: 100ms;">
+<div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">person_celebrate</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Giảng viên tận tâm</h3>
+<p class="text-body-text leading-relaxed">Đội ngũ chuyên gia, lãnh đạo doanh nghiệp trực tiếp giảng dạy và truyền cảm hứng nghề nghiệp mãnh liệt.</p>
+</div>
+<!-- Feature 3 -->
+<div class="group p-10 rounded-2xl bg-white vhu-shadow border border-slate-100 transition-all hover:bg-blue-50/50 reveal active" style="transition-delay: 200ms;">
+<div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">diversity_3</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Môi trường năng động</h3>
+<p class="text-body-text leading-relaxed">Hơn 30 câu lạc bộ đội nhóm, hoạt động ngoại khóa phong phú giúp sinh viên tự tin và tỏa sáng.</p>
+</div>
+<!-- Feature 4 -->
+<div class="group p-10 rounded-2xl bg-white vhu-shadow border border-slate-100 transition-all hover:bg-blue-50/50 reveal active">
+<div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">apartment</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Kết nối doanh nghiệp</h3>
+<p class="text-body-text leading-relaxed">Mạng lưới hơn 500 đối tác chiến lược cam kết nơi thực tập và ưu tiên tuyển dụng sau khi ra trường.</p>
+</div>
+<!-- Feature 5 -->
+<div class="group p-10 rounded-2xl bg-white vhu-shadow border border-slate-100 transition-all hover:bg-blue-50/50 reveal active" style="transition-delay: 100ms;">
+<div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Kỹ năng toàn diện</h3>
+<p class="text-body-text leading-relaxed">Trang bị kỹ năng mềm, ngoại ngữ và tư duy khởi nghiệp song hành cùng kiến thức chuyên môn vững chắc.</p>
+</div>
+<!-- Feature 6 -->
+<div class="group p-10 rounded-2xl bg-white vhu-shadow border border-slate-100 transition-all hover:bg-blue-50/50 reveal active" style="transition-delay: 200ms;">
+<div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">favorite</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Đồng hành cùng SV</h3>
+<p class="text-body-text leading-relaxed">Chính sách học bổng, hỗ trợ học phí và vay vốn không lãi suất giúp sinh viên yên tâm theo đuổi đam mê.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Majors Grid Section -->
+<section class="py-section-gap bg-slate-50" id="majors">
+<div class="max-w-container-max mx-auto px-6 lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4 reveal active">
+<div>
+<h2 class="text-3xl lg:text-4xl font-bold mb-3">Ngành đào tạo trọng điểm</h2>
+<p class="text-body-text text-lg">Khám phá lộ trình nghề nghiệp cùng các ngành học "hot" nhất</p>
+</div>
+<a class="text-primary font-bold hover:text-primary-dark flex items-center gap-2 group" href="#">
+                    Xem tất cả ngành <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Major Card 1 -->
+<div class="group bg-white rounded-2xl overflow-hidden vhu-shadow transition-all hover:scale-[1.02] reveal active">
+<div class="h-56 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQC4dYoXS4ERIlqx2bQAedsrPhYtniE9Ki90Hk1uMBff1JFKqaV77V98u4EVomBbA8V-6Q-JIQokBTdfQUqeZSix9-xJPqVAmdVJwgtb9d35GNAMYe69JmXAQdtuCUOtgwX8n4S04378wDQZ2z1ZX0XlQ5OLmFAPwkz_RYG8CN0owydoaeRnc7FBtM67jcanIHwub_eP6FY0bwqdiXIQewuDhk5PmNoWTuquQh5-HUGSNnK8V_GIay1qBEq1fVYZntHfyZ1iubApdq');"></div>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider">Công nghệ</div>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold mb-3">Công nghệ thông tin</h3>
+<p class="text-body-text text-sm mb-6 line-clamp-2">Làm chủ công nghệ số, AI, Big Data và phát triển ứng dụng di động dẫn đầu xu thế hiện đại.</p>
+<button class="w-full py-3.5 border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all text-sm rounded-lg">Tìm hiểu thêm</button>
+</div>
+</div>
+<!-- Major Card 2 -->
+<div class="group bg-white rounded-2xl overflow-hidden vhu-shadow transition-all hover:scale-[1.02] reveal active" style="transition-delay: 100ms;">
+<div class="h-56 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7SN2EVX3W1n2Ol95z8_u4xrf0Keu3Opb7kJG7_MR-3Hz1Ucoq_V9_wXLKUV576DZTzOWnK0jTr-2JkjMBQDTHwxBxOdSrfu4wbu2CTnuLF1eylir2Is3r4su0olqhqXQfbtY9yDXTxmLNjKRvtkH5nm1pm4wIYuWrV8FKjbu21xEwMyIu0SCc0oDxSckloH5D-1U62Krb5qXnbs2dII91A3e2DZNJfwHGvP0ZjoDUJ1g1NBZat-Ngnyw2lzy_gCB91vmgMqYeFMU2');"></div>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider">Kinh tế</div>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold mb-3">Marketing &amp; Kinh doanh</h3>
+<p class="text-body-text text-sm mb-6 line-clamp-2">Kiến tạo chiến lược, dẫn dắt thị trường và quản trị doanh nghiệp chuyên nghiệp trong kỷ nguyên mới.</p>
+<button class="w-full py-3.5 border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all text-sm rounded-lg">Tìm hiểu thêm</button>
+</div>
+</div>
+<!-- Major Card 3 -->
+<div class="group bg-white rounded-2xl overflow-hidden vhu-shadow transition-all hover:scale-[1.02] reveal active" style="transition-delay: 200ms;">
+<div class="h-56 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDW7XIoW7JrLLHCwZc9hvkzO_810KBj539E7O5rlJvMZsLIgp0rmvrmHowBCt1BTrYhR4sz-6PQrCHOV-czVDYIIVyHrVKPLS4cfki0HozF4OZmlBWNbuhgL-BFANozpbzPqx6J5eQu-uH4uYJHjPWernuLXh1dNE3PXIxVoF7gQNJGAP2gDw1rpuK4Q21HL_Zh8dxAvZmLbzHbvKkiQaHKAjjvo_aClYiEOE6qLG-gc1IPsLljApLEja-2GowBsKe3NtcXiIsNcIh2');"></div>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider">Truyền thông</div>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold mb-3">Truyền thông đa phương tiện</h3>
+<p class="text-body-text text-sm mb-6 line-clamp-2">Sáng tạo nội dung số, sản xuất video và quản trị mạng xã hội chuyên nghiệp cho doanh nghiệp lớn.</p>
+<button class="w-full py-3.5 border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all text-sm rounded-lg">Tìm hiểu thêm</button>
+</div>
+</div>
+<!-- Major Card 4 -->
+<div class="group bg-white rounded-2xl overflow-hidden vhu-shadow transition-all hover:scale-[1.02] reveal active" style="transition-delay: 300ms;">
+<div class="h-56 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9LAMl9STo5frUW8DicWBksQXtzRvnvBZuqkCVQRPiD4HCBY_R49rU2EmjVaLbkLEePGFVCFxTjbRkq_1Xi68xb33gC_ShYTmSb9YElJOviAKTQw_xIWI99Fz0ofNUpY189tL0Huv0WIb5Eelh7cpBfjNkIUXJTaMj1xiJQy32sIySAThYMb9fQ01-hI6osfmh6QZhNRcbCSPg4cRNvJCUxI1BBiCKvd_3YUJIogOBfbDdnIDr59qz0O_BTI8cBLdno4X4ZI6SMPif');"></div>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider">Du lịch</div>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold mb-3">Du lịch &amp; Khách sạn</h3>
+<p class="text-body-text text-sm mb-6 line-clamp-2">Trở thành những nhà quản lý hàng đầu trong ngành dịch vụ cao cấp và du lịch toàn cầu.</p>
+<button class="w-full py-3.5 border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all text-sm rounded-lg">Tìm hiểu thêm</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Student Journey Timeline -->
+<section class="py-section-gap bg-white">
+<div class="max-w-container-max mx-auto px-6 lg:px-margin-desktop">
+<div class="text-center mb-20 reveal active">
+<h2 class="text-3xl lg:text-4xl font-bold mb-4">Hành trình sinh viên tại VHU</h2>
+<p class="text-body-text text-lg">Lộ trình kiến tạo tương lai vững chắc từ những bước chân đầu tiên</p>
+</div>
+<div class="relative py-10">
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 transform -translate-x-1/2"></div>
+<div class="space-y-24">
+<!-- Year 1 -->
+<div class="relative flex flex-col md:flex-row items-center reveal active">
+<div class="flex-1 text-right pr-16 hidden md:block">
+<h3 class="text-2xl font-bold text-primary mb-3">Năm 1: Hội nhập &amp; Định hướng</h3>
+<p class="text-body-text">Làm quen môi trường đại học, rèn luyện kỹ năng mềm và tham gia các CLB năng khiếu.</p>
+</div>
+<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white font-bold relative z-10 vhu-shadow ring-8 ring-white shadow-xl text-xl">1</div>
+<div class="flex-1 md:pl-16 mt-8 md:mt-0 text-center md:text-left">
+<div class="md:hidden mb-4">
+<h3 class="text-xl font-bold text-primary">Năm 1: Hội nhập &amp; Định hướng</h3>
+<p class="text-body-text">Làm quen môi trường đại học, rèn luyện kỹ năng mềm và tham gia các CLB.</p>
+</div>
+<div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100 text-primary font-semibold">Trải nghiệm "Học kỳ quân đội" và "Chào tân sinh viên" đầy hứng khởi.</div>
+</div>
+</div>
+<!-- Year 2 -->
+<div class="relative flex flex-col md:flex-row items-center reveal active">
+<div class="flex-1 md:pr-16 text-center md:text-right order-2 md:order-1 mt-8 md:mt-0">
+<div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100 text-primary font-semibold">Tham gia các cuộc thi học thuật quy mô quốc gia và quốc tế.</div>
+</div>
+<div class="w-14 h-14 bg-primary-dark rounded-full flex items-center justify-center text-white font-bold relative z-10 vhu-shadow ring-8 ring-white shadow-xl text-xl order-1 md:order-2">2</div>
+<div class="flex-1 pl-16 hidden md:block order-3">
+<h3 class="text-2xl font-bold text-primary mb-3">Năm 2: Vững kiến thức cơ sở</h3>
+<p class="text-body-text">Tiếp cận kiến thức chuyên ngành cốt lõi và bắt đầu triển khai các dự án thực tế đầu tay.</p>
+</div>
+<div class="md:hidden order-3 text-center mt-4">
+<h3 class="text-xl font-bold text-primary">Năm 2: Vững kiến thức cơ sở</h3>
+</div>
+</div>
+<!-- Year 3 -->
+<div class="relative flex flex-col md:flex-row items-center reveal active">
+<div class="flex-1 text-right pr-16 hidden md:block">
+<h3 class="text-2xl font-bold text-primary mb-3">Năm 3: Trải nghiệm doanh nghiệp</h3>
+<p class="text-body-text">Thực tập tại các đối tác chiến lược hàng đầu của VHU, trực tiếp tích lũy kinh nghiệm làm việc.</p>
+</div>
+<div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white font-bold relative z-10 vhu-shadow ring-8 ring-white shadow-xl text-xl">3</div>
+<div class="flex-1 md:pl-16 mt-8 md:mt-0 text-center md:text-left">
+<div class="md:hidden mb-4">
+<h3 class="text-xl font-bold text-primary">Năm 3: Trải nghiệm doanh nghiệp</h3>
+</div>
+<div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100 text-primary font-semibold">Cơ hội thực tập có lương và kết nối sớm với nhà tuyển dụng tương lai.</div>
+</div>
+</div>
+<!-- Year 4 -->
+<div class="relative flex flex-col md:flex-row items-center reveal active">
+<div class="flex-1 md:pr-16 text-center md:text-right order-2 md:order-1 mt-8 md:mt-0">
+<div class="bg-secondary p-6 rounded-2xl text-white font-bold shadow-lg">Lễ tốt nghiệp rạng rỡ và sẵn sàng bắt đầu sự nghiệp mơ ước.</div>
+</div>
+<div class="w-14 h-14 bg-secondary rounded-full flex items-center justify-center text-white font-bold relative z-10 vhu-shadow ring-8 ring-white shadow-xl text-xl order-1 md:order-2 animate-bounce">4</div>
+<div class="flex-1 pl-16 hidden md:block order-3">
+<h3 class="text-2xl font-bold text-primary mb-3">Năm 4: Hoàn thiện &amp; Tốt nghiệp</h3>
+<p class="text-body-text">Thực hiện đồ án tốt nghiệp và chính thức gia nhập thị trường lao động toàn cầu đầy tự tin.</p>
+</div>
+<div class="md:hidden order-3 text-center mt-4">
+<h3 class="text-xl font-bold text-primary">Năm 4: Hoàn thiện &amp; Tốt nghiệp</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Parent Section -->
+<section class="py-section-gap bg-light-blue-tint text-on-surface overflow-hidden border-y border-blue-50">
+<div class="max-w-container-max mx-auto px-6 lg:px-margin-desktop grid lg:grid-cols-2 gap-16 items-center">
+<div class="reveal active">
+<h2 class="text-3xl lg:text-4xl font-bold mb-8 leading-tight text-primary">VHU – Nơi phụ huynh gửi gắm <br>trọn vẹn niềm tin</h2>
+<p class="text-body-text mb-10 text-lg leading-relaxed">Chúng tôi thấu hiểu những lo âu của các bậc cha mẹ khi chọn trường cho con. Tại VHU, tương lai và sự an tâm của quý vị được đặt lên hàng đầu.</p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary bg-white rounded-full p-0.5 shadow-sm">check_circle</span>
+<span class="font-medium text-slate-700">Cam kết giới thiệu việc làm sau tốt nghiệp cho 100% sinh viên.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary bg-white rounded-full p-0.5 shadow-sm">check_circle</span>
+<span class="font-medium text-slate-700">Chính sách học phí ổn định, không tăng trong suốt toàn bộ khóa học.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary bg-white rounded-full p-0.5 shadow-sm">check_circle</span>
+<span class="font-medium text-slate-700">Hệ thống quản lý sinh viên hiện đại, cập nhật tình hình thường xuyên cho phụ huynh.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary bg-white rounded-full p-0.5 shadow-sm">check_circle</span>
+<span class="font-medium text-slate-700">Hỗ trợ ký túc xá an ninh và các dịch vụ sinh viên tận tâm.</span>
+</li>
+</ul>
+</div>
+<div class="relative reveal active">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden vhu-shadow border-8 border-white">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQrYOvFr22Guk9NPVICDJoYi1uXL72x6JRsq3ggFW09nI07Ezdg61M91H8zToHDev4d_nVi4hr5ki_42OKNJBOIdLrQyrKTBQGtEMSgtnI3RWTqYG4VyvYDHNZ7i4_DpPhl1DYphLjfhrZJDhprl_qn0mNrxYHdf-Cwk-NA3IoQfHh2GHmOnvUIcUjZoLIjYL74FA0dliZAH3Q9pkK7VBTfq_O8uyvHFb4GTNryChqeRkgyf454SFJFhBWxoP0_sG-gkVNiOMv6SSm');"></div>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-white p-8 rounded-2xl text-heading max-w-xs vhu-shadow border border-slate-100">
+<p class="font-bold italic text-primary leading-relaxed">"Tôi hoàn toàn yên tâm khi con học tại VHU nhờ chương trình học sát thực tế và các thầy cô vô cùng tâm huyết."</p>
+<p class="mt-4 text-xs font-bold text-slate-500 uppercase tracking-widest">- Phụ huynh sinh viên K24</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Scholarships Section -->
+<section class="py-section-gap bg-white" id="scholarships">
+<div class="max-w-container-max mx-auto px-6 lg:px-margin-desktop">
+<div class="text-center mb-20 reveal active">
+<span class="text-primary font-bold text-sm uppercase tracking-widest block mb-4">Hỗ trợ tài chính</span>
+<h2 class="text-3xl lg:text-4xl font-bold mb-4">Quỹ học bổng "Vươn tới tương lai"</h2>
+<p class="text-body-text text-lg">Tổng giá trị lên đến 50 tỷ đồng dành cho tân sinh viên năm 2026</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8 items-stretch">
+<!-- Standard Scholarship -->
+<div class="bg-white border border-slate-200 p-10 rounded-3xl text-center vhu-shadow-hover transition-all flex flex-col reveal active">
+<h3 class="text-xl font-bold mb-4">Học bổng Nhập học sớm</h3>
+<div class="text-secondary font-extrabold text-3xl mb-4">10.000.000đ</div>
+<p class="text-body-text mb-8 text-sm leading-relaxed">Dành cho sinh viên hoàn tất hồ sơ đăng ký và nhập học trước thời hạn ưu tiên hàng năm.</p>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all" href="https://tuyensinh.vhu.edu.vn/tuyen-sinh-dai-hoc-chinh-quy-2026">
+                            Nhận thông tin <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Main Scholarship -->
+<div class="bg-light-blue-tint border border-primary/10 p-10 rounded-3xl text-center shadow-lg relative overflow-hidden transform lg:scale-105 flex flex-col reveal active" style="transition-delay: 100ms;">
+<div class="absolute top-6 right-6 bg-secondary text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest animate-pulse">Nổi bật</div>
+<h3 class="text-xl font-bold mb-4 text-primary">Học bổng Tài năng</h3>
+<div class="text-primary font-extrabold text-4xl mb-6">100% Học phí</div>
+<p class="text-body-text mb-10 text-sm leading-relaxed">Dành cho sinh viên có thành tích học tập xuất sắc, đạt giải cao trong các kỳ thi năng khiếu hoặc tài năng đặc biệt.</p>
+<div class="mt-auto">
+<a class="inline-block btn-primary px-10 py-3.5 font-bold shadow-lg border-2 border-primary rounded-lg" href="https://tuyensinh.vhu.edu.vn/tuyen-sinh-dai-hoc-chinh-quy-2026">Đăng ký xét tuyển</a>
+</div>
+</div>
+<!-- Loan Support -->
+<div class="bg-white border border-slate-200 p-10 rounded-3xl text-center vhu-shadow-hover transition-all flex flex-col reveal active" style="transition-delay: 200ms;">
+<h3 class="text-xl font-bold mb-4">Hỗ trợ Học phí</h3>
+<div class="text-secondary font-extrabold text-3xl mb-4">Vay vốn 0%</div>
+<p class="text-body-text mb-8 text-sm leading-relaxed">Chính sách đồng hành cùng sinh viên vượt khó, hỗ trợ trả góp học phí linh hoạt thông qua ngân hàng đối tác.</p>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all" href="https://tuyensinh.vhu.edu.vn/tuyen-sinh-dai-hoc-chinh-quy-2026">
+                            Tìm hiểu ngay <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Slider -->
+<section class="py-section-gap bg-slate-50 overflow-hidden">
+<div class="max-w-container-max mx-auto px-6 lg:px-margin-desktop">
+<h2 class="text-3xl lg:text-4xl font-bold text-center mb-16 reveal active">Cảm nhận từ sinh viên VHU</h2>
+<div class="relative" id="testimonial-slider">
+<div class="flex transition-transform duration-700 ease-out" id="slider-track" style="transform: translateX(0%);">
+<!-- Slide 1 -->
+<div class="min-w-full px-4">
+<div class="bg-white p-12 rounded-3xl vhu-shadow flex flex-col md:flex-row items-center gap-12 max-w-4xl mx-auto border border-slate-100">
+<div class="w-40 h-40 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary/10 shadow-xl">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDK2iT8XifRpJuZIVvMhHszm09j93k9mcIQ0OsM84sZqR9Y1p_Y1X9sMCIgmez26zNU4oLB1e9cWMC21MJ-epGV4hned9tD7vyvRtlDIPsa7Js7SUwFAvuAyhe2RNFVUlP5WTyCTw0fHVaBHa3qoN_PqUQeSU1nwCaiH1jRWzkC1VstNHYc16l0CWMVJl046LiLLRynlhN9Z8MJrThgT0iYHASc7qhisEIyxT4HuQBptw5lb-gIzpHmw9Q5RWSvCmq4ia8p4G4frq70');"></div>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute -top-10 -left-10 text-8xl text-primary/5 select-none">format_quote</span>
+<p class="text-body-text text-xl italic mb-6 leading-relaxed">"VHU không chỉ dạy tôi kiến thức mà còn cho tôi một môi trường tuyệt vời để rèn luyện bản lĩnh. Nhờ tham gia CLB Marketing, tôi đã tích lũy được kinh nghiệm thực chiến quý báu ngay từ năm 2."</p>
+<h4 class="font-bold text-xl text-heading">Nguyễn Thùy Linh</h4>
+<p class="text-primary font-semibold">Sinh viên năm 3 - Ngành Marketing</p>
+</div>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="min-w-full px-4">
+<div class="bg-white p-12 rounded-3xl vhu-shadow flex flex-col md:flex-row items-center gap-12 max-w-4xl mx-auto border border-slate-100">
+<div class="w-40 h-40 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary/10 shadow-xl">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiWnNCyUvJdi2iolFgeO8BM86je0vo6IycdO05wSyiIIUd1fkmVPCqf3rhsQGYudJcEQyJRm9_2REaDz-bhdPCrIYu5IXw1FWBHPi4Hi8CfB12dCoGHBJlb_zj2KUzpuTyeTyEnk_V8qbPQCKfiZjdNnl-sUjSrxMIKuc4eDTy4SYhguAZzkXlEPEQ2MZbvl9zIDdAwhi8IQzqnXIKBmpxUP_k6iXKNoHkXFdlSV2-eLORyOv4-RWO6BmgcUc4tNTP_zHpLHkHOKRT');"></div>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute -top-10 -left-10 text-8xl text-primary/5 select-none">format_quote</span>
+<p class="text-body-text text-xl italic mb-6 leading-relaxed">"Học bổng tài năng của VHU đã tiếp thêm động lực rất lớn giúp tôi theo đuổi ước mơ trở thành lập trình viên. Thầy cô ở đây luôn sẵn lòng hỗ trợ sinh viên hết mình trong mọi dự án."</p>
+<h4 class="font-bold text-xl text-heading">Trần Minh Quân</h4>
+<p class="text-primary font-semibold">Cựu sinh viên - Ngành CNTT</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-12 gap-3">
+<button class="h-3 rounded-full slider-dot transition-all duration-300 bg-primary w-8" onclick="goToSlide(0)"></button>
+<button class="h-3 rounded-full slider-dot transition-all duration-300 bg-slate-300 w-3" onclick="goToSlide(1)"></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Registration Form Section -->
+<section class="py-section-gap bg-white" id="register">
+<div class="max-w-container-max mx-auto px-6 lg:px-margin-desktop grid lg:grid-cols-2 gap-20 items-start">
+<div class="reveal active">
+<h2 class="text-3xl lg:text-4xl font-bold mb-8">Sẵn sàng bắt đầu <br>hành trình của bạn?</h2>
+<p class="text-body-text text-lg mb-12 leading-relaxed">Để lại thông tin để được đội ngũ tư vấn chuyên nghiệp của VHU hỗ trợ chọn ngành phù hợp và hướng dẫn chuẩn bị hồ sơ nhập học chi tiết nhất.</p>
+<div class="space-y-10">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-3xl">call</span>
+</div>
+<div>
+<p class="font-bold text-heading">Hotline Tư vấn (Miễn phí)</p>
+<p class="text-primary text-3xl font-extrabold">1800 1568</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-3xl">mail</span>
+</div>
+<div>
+<p class="font-bold text-heading">Email hỗ trợ</p>
+<p class="text-body-text text-xl">tuyensinh@vhu.edu.vn</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded-3xl vhu-shadow border border-slate-100 reveal active">
+<h3 class="text-2xl font-bold text-primary mb-10 text-center uppercase tracking-tight">Đăng ký tư vấn trực tuyến</h3>
+<form class="space-y-6" id="vhu-form">
+<div>
+<input class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Họ và tên sinh viên *" required="" type="text">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<input class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Số điện thoại *" required="" type="tel">
+<input class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all" placeholder="Email" type="email">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<select class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all text-body-text">
+<option value="">Chọn Tỉnh/Thành phố</option>
+<option value="hcm">TP. Hồ Chí Minh</option>
+<option value="hn">Hà Nội</option>
+</select>
+<select class="w-full bg-slate-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all text-body-text">
+<option value="">Chọn ngành quan tâm</option>
+<option value="it">Công nghệ thông tin</option>
+<option value="biz">Quản trị kinh doanh</option>
+<option value="tour">Du lịch &amp; Khách sạn</option>
+</select>
+</div>
+<div class="flex items-start gap-3 py-2">
+<input class="mt-1 rounded text-primary focus:ring-primary" id="consent" required="" type="checkbox">
+<label class="text-xs text-slate-500 leading-normal" for="consent">Tôi đồng ý nhận thông tin tư vấn tuyển sinh và các chương trình ưu đãi từ Trường Đại học Văn Hiến qua các kênh liên lạc đã cung cấp.</label>
+</div>
+<button class="w-full btn-primary py-5 font-bold text-lg shadow-xl uppercase tracking-widest border-2 border-primary rounded-lg" type="submit">GỬI YÊU CẦU ĐĂNG KÝ</button>
+</form>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-gap bg-slate-50">
+<div class="max-w-3xl mx-auto px-6 lg:px-margin-desktop">
+<h2 class="text-3xl lg:text-4xl font-bold text-center mb-16 reveal active">Câu hỏi thường gặp</h2>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="bg-white rounded-2xl overflow-hidden border border-slate-200 reveal active">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors faq-btn" onclick="toggleFaq(0)">
+<span class="font-bold text-heading">Hồ sơ xét tuyển học bạ cần chuẩn bị những gì?</span>
+<span class="material-symbols-outlined transition-transform duration-300 faq-icon text-primary">add</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300 faq-content bg-slate-50/50">
+<div class="p-6 text-body-text leading-relaxed">
+                            Hồ sơ bao gồm: Phiếu đăng ký xét tuyển theo mẫu của VHU, bản sao học bạ THPT có công chứng, bản sao bằng tốt nghiệp hoặc giấy chứng nhận tốt nghiệp tạm thời, và các giấy tờ minh chứng ưu tiên nếu có.
+                        </div>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-white rounded-2xl overflow-hidden border border-slate-200 reveal active">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors faq-btn" onclick="toggleFaq(1)">
+<span class="font-bold text-heading">Học phí tại VHU có thay đổi trong suốt khóa học không?</span>
+<span class="material-symbols-outlined transition-transform duration-300 faq-icon text-primary">add</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300 faq-content bg-slate-50/50">
+<div class="p-6 text-body-text leading-relaxed">
+                            VHU cam kết giữ mức học phí ổn định, không tăng trong suốt toàn bộ khóa học chính khóa của sinh viên. Điều này giúp gia đình và sinh viên hoàn toàn chủ động và yên tâm về kế hoạch tài chính.
+                        </div>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-white rounded-2xl overflow-hidden border border-slate-200 reveal active">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors faq-btn" onclick="toggleFaq(2)">
+<span class="font-bold text-heading">Cơ hội việc làm của sinh viên VHU sau khi tốt nghiệp?</span>
+<span class="material-symbols-outlined transition-transform duration-300 faq-icon text-primary">add</span>
+</button>
+<div class="max-h-0 overflow-hidden transition-all duration-300 faq-content bg-slate-50/50">
+<div class="p-6 text-body-text leading-relaxed">
+                            Với mạng lưới đối tác rộng khắp gồm hơn 500 doanh nghiệp trong và ngoài nước, VHU cam kết hỗ trợ thực tập 100% và ưu tiên giới thiệu việc làm phù hợp cho toàn bộ sinh viên đủ điều kiện tốt nghiệp.
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer CTA Section -->
+<section class="py-24 bg-light-blue-tint text-on-surface text-center relative overflow-hidden border-t border-blue-50">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent opacity-50"></div>
+<div class="max-w-4xl mx-auto px-6 reveal relative z-10 active">
+<h2 class="text-4xl lg:text-5xl font-bold mb-10 leading-tight text-primary">Tương lai không chờ đợi – Hãy bắt đầu từ VHU ngay hôm nay</h2>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="btn-primary text-white px-12 py-5 font-extrabold text-xl hover:scale-105 transition-all shadow-2xl uppercase tracking-widest border-2 border-primary rounded-lg" href="#register">Đăng ký xét tuyển</a>
+<a class="bg-white text-primary border-2 px-12 py-5 rounded-2xl font-extrabold text-xl hover:bg-slate-50 transition-all shadow-xl flex items-center gap-3 uppercase tracking-widest border-primary rounded-lg" href="tel:18001568">
+<span class="material-symbols-outlined">call</span> GỌI 1800 1568
+                </a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white text-slate-700 py-20 border-t border-slate-100">
+<div class="max-w-container-max mx-auto px-6 lg:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-gutter">
+<div class="space-y-8">
+<img alt="VHU Logo" class="h-14 lg:h-16 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMCBnrFrTX88ZzSSFtbY6vadLpoVparZswwzW-z5xRj2rf6VeINZsNx7BxpXCFuU0kZVqJjCOfvT7Jq74mXNersghCEabz5Z63t-LnMqt4CSpWSqzoCSkyWHMFCFLmxqyNUXod3Cs01vIM3Hv1Vx00DcsQUKUD3f5PZ9doc-sbF6aXR_195zTDzzXd1-ZbvXlXbKrSDl_83HzP4A18n5DLn7AdepAFM5u4X4e5KpadchNiKybORpxlwUqF4qnWonbuIJN7__Um70Lf">
+<p class="text-slate-500 text-sm leading-relaxed">Thành viên của HungHau Holdings. Đào tạo nhân lực chất lượng cao theo định hướng ứng dụng, góp phần phát triển kinh tế xã hội bền vững.</p>
+<div class="flex gap-4">
+<a class="w-11 h-11 bg-slate-50 border border-slate-200 rounded-full flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-lg">face_nod</span></a>
+<a class="w-11 h-11 bg-slate-50 border border-slate-200 rounded-full flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-lg">video_library</span></a>
+<a class="w-11 h-11 bg-slate-50 border border-slate-200 rounded-full flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white hover:border-primary transition-all" href="#"><span class="material-symbols-outlined text-lg">alternate_email</span></a>
+</div>
+</div>
+<div class="space-y-6">
+<h3 class="text-lg font-bold text-slate-900 uppercase tracking-wider">Thông tin liên hệ</h3>
+<ul class="space-y-4 text-slate-500 text-sm">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-base">location_on</span> 624 Âu Cơ - Phường Bảy Hiền - TP Hồ Chí Minh.</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-base">call</span> Hotline: 1800 1568</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-base">mail</span> Email: tuyensinh@vhu.edu.vn</li>
+</ul>
+</div>
+<div class="space-y-6">
+<h3 class="text-lg font-bold text-slate-900 uppercase tracking-wider">Liên kết nhanh</h3>
+<ul class="space-y-3 text-slate-500 text-sm">
+<li class=""><a class="hover:text-primary transition-colors" href="#">Trang chủ</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Thông tin tuyển sinh</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Chính sách học phí</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Tra cứu kết quả</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h3 class="text-lg font-bold text-slate-900 uppercase tracking-wider">Chính sách &amp; Cam kết</h3>
+<ul class="space-y-3 text-slate-500 text-sm">
+<li class=""><a class="hover:text-primary transition-colors" href="#">Chính sách bảo mật</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Điều khoản sử dụng</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Cam kết đào tạo</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Định hướng phát triển</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-6 lg:px-margin-desktop mt-20 pt-8 border-t border-slate-100 text-center text-slate-400 text-xs">
+            © 2026 Van Hien University. All rights reserved. Designed for international standards.
+        </div>
+</footer>
+<script>
+        // Mobile navigation
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+
+        function setMobileMenu(open) {
+            mobileMenu.classList.toggle('is-open', open);
+            mobileMenuButton.setAttribute('aria-expanded', String(open));
+            mobileMenuButton.setAttribute('aria-label', open ? 'Đóng menu điều hướng' : 'Mở menu điều hướng');
+            mobileMenuIcon.textContent = open ? 'close' : 'menu';
+        }
+
+        mobileMenuButton.addEventListener('click', () => {
+            setMobileMenu(!mobileMenu.classList.contains('is-open'));
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => setMobileMenu(false));
+        });
+
+        document.addEventListener('click', event => {
+            if (!event.target.closest('.site-header')) {
+                setMobileMenu(false);
+            }
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                setMobileMenu(false);
+                mobileMenuButton.focus();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) setMobileMenu(false);
+        });
+
+        // Reveal on scroll logic
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Testimonial Slider logic
+        let currentSlide = 0;
+        const track = document.getElementById('slider-track');
+        const dots = document.querySelectorAll('.slider-dot');
+
+        function goToSlide(n) {
+            currentSlide = n;
+            track.style.transform = `translateX(-${n * 100}%)`;
+            dots.forEach((dot, index) => {
+                if (index === n) {
+                    dot.classList.add('bg-primary', 'w-8');
+                    dot.classList.remove('bg-slate-300', 'w-3');
+                } else {
+                    dot.classList.remove('bg-primary', 'w-8');
+                    dot.classList.add('bg-slate-300', 'w-3');
+                }
+            });
+        }
+        
+        // Init dots
+        goToSlide(0);
+
+        // Auto slide
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % 2;
+            goToSlide(currentSlide);
+        }, 6000);
+
+        // FAQ Toggle logic
+        function toggleFaq(index) {
+            const contents = document.querySelectorAll('.faq-content');
+            const icons = document.querySelectorAll('.faq-icon');
+            const buttons = document.querySelectorAll('.faq-btn');
+            
+            contents.forEach((content, i) => {
+                if (i === index) {
+                    const isOpen = content.style.maxHeight !== '0px' && content.style.maxHeight !== '';
+                    content.style.maxHeight = isOpen ? '0px' : content.scrollHeight + 'px';
+                    icons[i].innerText = isOpen ? 'add' : 'remove';
+                    icons[i].style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                } else {
+                    content.style.maxHeight = '0px';
+                    icons[i].innerText = 'add';
+                    icons[i].style.transform = 'rotate(0deg)';
+                }
+            });
+        }
+
+        // Form submission handling
+        document.getElementById('vhu-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'ĐANG GỬI...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Cảm ơn bạn đã quan tâm! Đội ngũ tư vấn tuyển sinh VHU sẽ liên hệ với bạn qua số điện thoại cung cấp trong vòng 24 giờ tới.');
+                e.target.reset();
+                btn.innerText = originalText;
+                btn.disabled = false;
+            }, 1000);
+        });
+    </script>
+
+
+</body></html>
